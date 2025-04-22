@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /traitement.php
 Disallow: /mentions-legales.html
-Sitemap: https://plombier-94/sitemap.xml
+Sitemap: https://deco-plombier-94.fr/sitemap.xml

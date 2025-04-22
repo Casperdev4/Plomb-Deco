@@ -41,7 +41,7 @@ if (contient_liens($commentaires) || contient_cyrillique($commentaires)) {
 
 $message = "Nom : $nom \n";
 $message .= "Téléphone : $telephone \n";
-$message .= "Prestation : $services \n";
+$message .= "Service : $services \n";
 $message .= "Commentaires : $commentaires \n";
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -63,7 +63,7 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
-    $mail->setFrom('contact@webprime.fr', 'Plombier 94');
+    $mail->setFrom('contact@webprime.fr', 'Plomb & Déco');
     $mail->addAddress('plomb.deco@gmail.com');
     $mail->addAddress('webprime91@hotmail.com');
     $mail->CharSet = 'UTF-8';
@@ -74,7 +74,7 @@ try {
 
     $mail->send();
 
-    header('Location: https://plombier-94/');
+    header('Location: https://deco-plombier-94.fr/');
     exit();
 } catch (Exception $e) {
     echo "Message non envoyé. Erreur Mailer: {$mail->ErrorInfo}";
